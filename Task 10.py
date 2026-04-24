@@ -14,13 +14,13 @@ def randomfractaltree(n, length, angle, scale): # defines a function called rand
     
     # left branch
     new_angle_left = random.randint(-8, 8)  # adds random variation to the angle for the left branch
-    new_scale_left = random.random() * 0.14 - 0.07  # adds random variation to the scale for the left branch
+    new_scale_left = random.random() * 0.2 - 0.1   # adds random variation to the scale for the left branch
     turtle.left(angle + new_angle_left)  # turns left by the base angle plus the random variation
     randomfractaltree(n - 1, length * (scale + new_scale_left), angle, scale) # draws left branch with length based on random scale variation
     
     # right branch
     new_angle_right = random.randint(-8, 8)  # adds random variation to the angle for the right branch
-    new_scale_right = random.random() * 0.14 - 0.07  # adds random variation to the scale for the right branch
+    new_scale_right = random.random() * 0.2 - 0.1   # adds random variation to the scale for the right branch
     turtle.right((angle + new_angle_left) + (angle + new_angle_right))  # turns right past the left turn to the new right angle
     randomfractaltree(n - 1, length * (scale + new_scale_right), angle, scale) # draws right branch with length based on random scale variation
     
