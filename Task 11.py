@@ -7,10 +7,9 @@ turtle.penup()
 turtle.goto(0, -250)  # starts turtle at the bottom of the screen to fit bigger trees
 turtle.pendown()
 
-def randomfractaltree(n, length, angle, scale, randomness): # defines a function called randomfractaltree with 5 parameters: n, length, angle, scale, and randomness.
+def randomfractaltree(n, length, angle, scale, randomness): # function called randomfractaltree with 5 parameters: n, length, angle, scale, and randomness.
     if n < 1:  # if n is less than 1, the function stops and doesn't draw any more branches
         return
-    
     turtle.forward(length)  # draws current branch
     # left branch
     new_angle_left = random.randint(-randomness, randomness)  # adds random variation to the angle for the left branch
@@ -36,7 +35,7 @@ def menu(): # defines another function called menu to draw a tree based on user 
     scale = float(input("Enter scale factor: "))
     thickness = int(input("Enter pensize: "))
     pencolour = input("Enter pen colour: ")
-    randomness = int(input("Enter randomness level (0 to 20 recommended): "))
+    randomness = int(input("Enter randomness level (0 to 30 recommended): "))
     
     turtle.pensize(thickness) # sets the pen thickness based on user input
     turtle.color(pencolour) # sets the pen colour based on user input
