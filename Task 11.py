@@ -23,7 +23,6 @@ def randomfractaltree(n, length, angle, scale, randomness): # function called ra
     turtle.right((angle + new_angle_left) + (angle + new_angle_right))  # turns right past the left turn to the new right angle
     randomfractaltree(n - 1, length * (scale + new_scale_right), angle, scale, randomness) # draws right branch with length based on random variation
     
-    # returns to original position to draw the next branch
     turtle.left(angle + new_angle_right)  # turns left to return to original direction  
     turtle.backward(length) # moves turtle back to the starting point of current branch to draw the next branch
 
@@ -36,7 +35,7 @@ def menu(): # defines another function called menu to draw a tree based on user 
     thickness = int(input("Enter pensize: "))
     pencolour = input("Enter pen colour: ")
     randomness = int(input("Enter randomness level (0 to 30 recommended): "))
-    
+
     turtle.pensize(thickness) # sets the pen thickness based on user input
     turtle.color(pencolour) # sets the pen colour based on user input
 
